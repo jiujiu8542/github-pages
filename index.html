@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>摩斯密码表白器</title>
+    <title></title> <!-- 移除了标题内容 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script>
@@ -86,7 +86,7 @@
             <i class="fa fa-heart"></i>
         </div>
         <div id="message" class="mt-10 text-center max-w-md">
-            <p class="text-lg md:text-xl mb-6">这段闪烁的摩斯密码代表着一个秘密信息，你能破译它的含义吗？</p>
+            <p class="text-lg md:text-xl mb-6">这段闪烁的节奏代表着一个秘密信息，你能破译它的含义吗？</p> <!-- 修改了提示文字，更隐晦 -->
             <div id="input-container" class="flex flex-col sm:flex-row gap-3 justify-center">
                 <input type="text" id="answer" placeholder="输入你破译的内容" class="px-4 py-2 rounded-lg border border-secondary focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all">
                 <button id="submit" class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg transition-all transform hover:scale-105">
@@ -109,7 +109,6 @@
             const resultDiv = document.getElementById('result');
             const restartBtn = document.getElementById('restart');
             const floatingHearts = document.getElementById('floating-hearts');
-            const messageContainer = document.getElementById('message');
 
             // 摩斯密码映射表
             const morseCodeMap = {
@@ -196,7 +195,7 @@
             submitBtn.addEventListener('click', () => {
                 const answer = answerInput.value.trim();
                 if (answer === secretMessage) {
-                    resultDiv.textContent = '恭喜你破译成功！我也爱你 ❤️';
+                    resultDiv.textContent = '我也爱你 ❤️'; // 简化了成功提示
                     resultDiv.classList.remove('hidden');
                     
                     // 停止动画
@@ -254,3 +253,4 @@
     </script>
 </body>
 </html>
+    
